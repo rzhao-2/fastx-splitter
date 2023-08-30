@@ -7,7 +7,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = env::args().collect();
 
     if args.len() != 4 {
-        eprintln!("Usage: {} <input_file> <output_directory> <reads_per_file>", args[0]);
+        eprintln!(
+            "Usage: {} <input_file> <output_directory> <reads_per_file>",
+            args[0]
+        );
         std::process::exit(1);
     }
 
